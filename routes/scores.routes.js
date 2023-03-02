@@ -4,7 +4,7 @@ const scoreRouter = express.Router();
 
 scoreRouter.get("/getscore", async (req, res) => {
   try {
-    let data = await scoreModel.find().sort("score:0");
+    let data = await scoreModel.find().sort("score:1");
     res.send(data);
   } catch (err) {
     console.log(err);
